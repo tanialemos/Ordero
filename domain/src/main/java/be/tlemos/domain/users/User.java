@@ -18,4 +18,24 @@ public abstract class User {
     protected void setUserId(Integer userId){
         this.userId = userId;
     }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String geteMailAddress() {
+        return eMailAddress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 }
