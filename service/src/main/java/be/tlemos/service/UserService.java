@@ -1,5 +1,6 @@
 package be.tlemos.service;
 
+import be.tlemos.domain.users.Customer;
 import be.tlemos.domain.users.User;
 import be.tlemos.domain.users.UserRepository;
 
@@ -28,9 +29,9 @@ public class UserService {
         return listOfUsers;
     }
 
-    public User addNewCustomer(User user){
-        userRepository.addUserToRepository(user);
-        return user;
+    public User addNewCustomer(Customer customer){
+        userRepository.addUserToRepository(customer);
+        return customer;
     }
 
 }

@@ -22,7 +22,7 @@ public class UserController {
         this.userMapper = userMapper;
     }
 
-    @GetMapping(path = "/users", produces = "application/json")
+    @GetMapping(produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public List<UserDto> getUsers(){
         List<UserDto> userDtoList = new ArrayList<>();
@@ -33,10 +33,10 @@ public class UserController {
         return userDtoList;
     }
 
-    @PostMapping(path = "/users/customers", consumes = "application/json", produces = "application/json")
+    @PostMapping(path = "/customers", consumes = "application/json", produces = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public UserDto createCustomerAccount(@RequestBody UserDto customer){
         User user  = userService.addNewCustomer(userMapper.mapDtoToUser(customer));
-        return customer;
+        return userMapper.mapUserToDto(user);
     }
 }

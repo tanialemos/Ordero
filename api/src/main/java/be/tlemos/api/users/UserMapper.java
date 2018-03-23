@@ -1,5 +1,6 @@
 package be.tlemos.api.users;
 
+import be.tlemos.domain.users.Customer;
 import be.tlemos.domain.users.User;
 import be.tlemos.domain.users.UserBuilder;
 
@@ -15,7 +16,7 @@ public class UserMapper {
                 user.getPhoneNumber());
     }
 
-    public User mapDtoToUser(UserDto UserDto){
+    public Customer mapDtoToUser(UserDto UserDto){
         return UserBuilder.buildUser()
                 .withFirstName(UserDto.getFirstName())
                 .withLastName(UserDto.getLastName())
