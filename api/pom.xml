@@ -11,4 +11,25 @@
     </parent>
 
     <artifactId>api</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>be.tlemos</groupId>
+            <artifactId>service</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>be.tlemos</groupId>
+            <artifactId>domain</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
 </project>
