@@ -11,11 +11,17 @@ public class UserRepository {
 
     public UserRepository() {
         userRepository = new HashMap<>();
+        idCounter = 1;
     }
 
-    public Map<Integer, User> getAllUsers(){
+    public Map<Integer, User> getAllUsersFromRepository(){
         return Collections.unmodifiableMap(userRepository);
     }
 
+    public void addUserToRepository(User user){
+        user.setUserId(idCounter);
+        userRepository.put(idCounter, user);
+        idCounter++;
+    }
 
 }
