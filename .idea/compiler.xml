@@ -9,7 +9,6 @@
         <module name="api" />
         <module name="domain" />
         <module name="jar" />
-        <module name="Ordero" />
         <module name="service" />
       </profile>
     </annotationProcessing>
