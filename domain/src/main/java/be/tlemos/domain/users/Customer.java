@@ -1,10 +1,19 @@
 package be.tlemos.domain.users;
 
-public class Customer extends User {
+public class Customer {
 
     private int UserId;
+    private String firstName;
+    private String lastName;
+    private String eMailAddress;
+    private String phoneNumber;
 
-    public Customer(String firstName, String lastName, String eMailAddress, int phoneNumber) {
-        super(firstName, lastName, eMailAddress, phoneNumber);
+    public Customer(UserBuilder userBuilder){
+        this.firstName = userBuilder.getFirstName();
+        this.lastName = userBuilder.getLastName();
+        this.eMailAddress = userBuilder.geteMailAddress();
+        this.phoneNumber = userBuilder.getPhoneNumber();
     }
+
+
 }
