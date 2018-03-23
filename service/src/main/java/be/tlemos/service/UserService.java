@@ -24,8 +24,9 @@ public class UserService {
         return listOfUsers;
     }
 
-    public void addNewCustomer(User user){
+    public User addNewCustomer(User user){
         userRepository.addUserToRepository(user);
+        return user;
     }
 
 }

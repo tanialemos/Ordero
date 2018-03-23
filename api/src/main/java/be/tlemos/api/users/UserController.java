@@ -4,10 +4,7 @@ import be.tlemos.domain.users.Customer;
 import be.tlemos.domain.users.User;
 import be.tlemos.service.UserService;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -36,7 +33,10 @@ public class UserController {
         return userDtoList;
     }
 
-    public UserDto createCustomerAccount(UserDto customer){
-        Customer customer = (Customer) userService.addNewCustomer(userMapper.);
+    @PostMapping(path = "/users/customers", consumes = "application/json", produces = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public UserDto createCustomerAccount(@RequestBody UserDto customer){
+        User user  = userService.addNewCustomer(userMapper.mapDtoToUser(customer));
+        return customer;
     }
 }
