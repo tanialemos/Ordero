@@ -1,9 +1,11 @@
 package be.tlemos.domain.users;
 
+import javax.inject.Named;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+@Named
 public class UserRepository {
 
     private int idCounter;
