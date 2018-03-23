@@ -1,10 +1,16 @@
 package be.tlemos.api.users;
 
+import be.tlemos.domain.users.User;
 import be.tlemos.service.UserService;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/users")
@@ -16,5 +22,16 @@ public class UserController {
     public UserController(UserService userService, UserMapper userMapper) {
         this.userService = userService;
         this.userMapper = userMapper;
+    }
+
+    @GetMapping(path = "/users", produces = "application/json")
+    @ResponseStatus(HttpStatus.OK)
+    public List<UserDto> getUsers(){
+        List<UserDto> userDtoList = new ArrayList<>();
+        List<User> userList = userService.getAllUsers();
+        for (User user : userList){
+            userDtoList.add(userMapper.mapUserToDto(user));
+        }
+        return userDtoList;
     }
 }
