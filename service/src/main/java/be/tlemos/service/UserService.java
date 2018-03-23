@@ -20,7 +20,11 @@ public class UserService {
 
     public List<User> getAllUsers(){
         List listOfUsers = new ArrayList();
-        listOfUsers.addAll(userRepository.getAllUsersFromRepository().values());
+        try {
+            listOfUsers = userRepository.getAllUsersFromRepository();
+        }
+        catch (Exception e){
+        }
         return listOfUsers;
     }
 
