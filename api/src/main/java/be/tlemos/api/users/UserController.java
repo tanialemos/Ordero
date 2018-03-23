@@ -1,5 +1,6 @@
 package be.tlemos.api.users;
 
+import be.tlemos.domain.users.Customer;
 import be.tlemos.domain.users.User;
 import be.tlemos.service.UserService;
 import org.springframework.http.HttpStatus;
@@ -33,5 +34,9 @@ public class UserController {
             userDtoList.add(userMapper.mapUserToDto(user));
         }
         return userDtoList;
+    }
+
+    public UserDto createCustomerAccount(UserDto customer){
+        Customer customer = (Customer) userService.addNewCustomer(userMapper.);
     }
 }

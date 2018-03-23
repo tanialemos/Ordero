@@ -13,4 +13,20 @@ class UserDto {
         this.eMailAddress = eMailAddress;
         this.phoneNumber = phoneNumber;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String geteMailAddress() {
+        return eMailAddress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 }

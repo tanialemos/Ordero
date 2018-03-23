@@ -1,6 +1,7 @@
 package be.tlemos.api.users;
 
 import be.tlemos.domain.users.User;
+import be.tlemos.domain.users.UserBuilder;
 
 import javax.inject.Named;
 
@@ -12,6 +13,15 @@ public class UserMapper {
                 user.getLastName(),
                 user.geteMailAddress(),
                 user.getPhoneNumber());
+    }
+
+    public User mapDtoToUser(UserDto UserDto){
+        return UserBuilder.buildUser()
+                .withFirstName(UserDto.getFirstName())
+                .withLastName(UserDto.getLastName())
+                .withEMailAddress(UserDto.geteMailAddress())
+                .withPhoneNumber(UserDto.getPhoneNumber())
+                .buildCustomer();
     }
 
 }
