@@ -1,6 +1,5 @@
 package be.tlemos.domain.orders;
 
-import be.tlemos.domain.items.Item;
 import be.tlemos.domain.items.ItemStock;
 import be.tlemos.domain.users.User;
 import be.tlemos.domain.users.UserRepository;
@@ -8,6 +7,8 @@ import be.tlemos.domain.users.UserRepository;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.Arrays.asList;
 
 public class Order {
 
@@ -33,5 +34,75 @@ public class Order {
     private void generateInitialOrderGroupData(){
         itemGroup1 = new ItemGroup(1, itemStock.getItemById("Black Shoes"), 5);
         itemGroup2 = new ItemGroup(2, itemStock.getItemById("Flip-flops"), 7);
+        itemGroupList.add(itemGroup1);
+        itemGroupList.add(itemGroup2);
+    }
+
+    private void addItemGroupToOrder(ItemGroup itemGroup){
+        itemGroupList.add(itemGroup);
+    }
+
+    public ItemStock getItemStock() {
+        return itemStock;
+    }
+
+    public void setItemStock(ItemStock itemStock) {
+        this.itemStock = itemStock;
+    }
+
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
+
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public User getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(User customer) {
+        this.customer = customer;
+    }
+
+    public int getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
+    }
+
+    public List<ItemGroup> getItemGroupList() {
+        return itemGroupList;
+    }
+
+    public void setItemGroupList(List<ItemGroup> itemGroupList) {
+        this.itemGroupList = itemGroupList;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public ItemGroup getItemGroup1() {
+        return itemGroup1;
+    }
+
+    public void setItemGroup1(ItemGroup itemGroup1) {
+        this.itemGroup1 = itemGroup1;
+    }
+
+    public ItemGroup getItemGroup2() {
+        return itemGroup2;
+    }
+
+    public void setItemGroup2(ItemGroup itemGroup2) {
+        this.itemGroup2 = itemGroup2;
     }
 }
