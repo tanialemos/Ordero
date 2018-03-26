@@ -6,16 +6,15 @@ import java.util.*;
 @Named
 public class UserRepository {
 
-    private int idCounter;
-    private Map<Integer, User> userRepository;
-    User user1;
-    User user2;
-    User user3;
+    private String idCounter;
+    private Map<String, User> userRepository;
+    private User user1;
+    private User user2;
+    private User user3;
 
     public UserRepository() {
-        userRepository = new HashMap<>();
+        userRepository = new HashMap<String, User>();
         initialDataInRepository();
-        idCounter = 4;
     }
 
     public void initialDataInRepository(){
@@ -41,7 +40,6 @@ public class UserRepository {
     public void addUserToRepository(User user){
         user.setUserId(idCounter);
         userRepository.put(idCounter, user);
-        idCounter++;
     }
 
 //    class UserData {

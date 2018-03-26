@@ -1,8 +1,10 @@
 package be.tlemos.domain.users;
 
+import java.util.UUID;
+
 public abstract class User {
 
-    private int userId;
+    private String userId;
     private String firstName;
     private String lastName;
     private String eMailAddress;
@@ -15,11 +17,11 @@ public abstract class User {
         this.phoneNumber = userBuilder.getPhoneNumber();
     }
 
-    protected void setUserId(Integer userId){
-        this.userId = userId;
+    protected void setUserId(String userId){
+        this.userId = UUID.randomUUID().toString();
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
