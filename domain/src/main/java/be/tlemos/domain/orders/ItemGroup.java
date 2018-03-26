@@ -1,39 +1,33 @@
 package be.tlemos.domain.orders;
 
-import be.tlemos.domain.items.Item;
-
 import java.time.LocalDate;
 
 public class ItemGroup {
 
     private int ItemGroupId;
-    private Item item;
+    private String itemName;
     private int orderedAmount;
     private LocalDate orderDate;
     private LocalDate shippingDate;
     private double subtotal;
 
-    public ItemGroup(int itemGroupId, Item item, int orderedAmount) {
+    public ItemGroup(int itemGroupId, String itemName, int orderedAmount, LocalDate shippingDate, double subtotal) {
         this.ItemGroupId = itemGroupId;
-        this.item = item;
+        this.itemName = itemName;
         this.orderedAmount = orderedAmount;
         this.orderDate = LocalDate.now();
-        this.shippingDate = calculateShippingDate();
-        this.subtotal = calculateSubTotal();
+        this.shippingDate = shippingDate;
+        this.subtotal = subtotal;
     }
 
-    public LocalDate calculateShippingDate(){
-        return orderDate.plusDays(1);
-        // todo: calculate if item not in stock
-    }
+//    public LocalDate calculateShippingDate(){
+//        return orderDate.plusDays(1);
+//        // todo: calculate if item not in stock
+//    }
 
-    public double calculateSubTotal(){
-        return item.getPrice() * orderedAmount;
-    }
-
-    public Item getItem() {
-        return item;
-    }
+//    public String getItem() {
+//        return item;
+//    }
 
     public int getOrderedAmount() {
         return orderedAmount;
@@ -50,4 +44,14 @@ public class ItemGroup {
     public void setShippingDate(LocalDate shippingDate) {
         this.shippingDate = shippingDate;
     }
+
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
+
+    public double getSubtotal() {
+        return subtotal;
+    }
+
+
 }

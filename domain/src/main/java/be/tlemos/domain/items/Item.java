@@ -1,7 +1,5 @@
 package be.tlemos.domain.items;
 
-import java.util.UUID;
-
 public class Item {
 
     private String name;

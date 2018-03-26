@@ -1,24 +1,27 @@
 package be.tlemos.api.orders;
 
 import be.tlemos.domain.orders.ItemGroup;
-import be.tlemos.domain.users.User;
 
+import javax.inject.Inject;
 import java.util.List;
+
 
 public class OrderDto {
 
+    private ItemGroupMapper itemGroupMapper;
     private int orderNumber;
-    private ItemGroup[] itemGroupList;
+    private ItemGroupDto[] itemGroupDtoList;
     private String customerId;
     private double totalPrice;
 
     public OrderDto() {
     }
 
-    public OrderDto(int orderNumber, ItemGroup[] itemGroupList, User customer, double totalPrice) {
+    public OrderDto(int orderNumber, List<ItemGroup> itemGroupList, String customerId, double totalPrice) {
+        itemGroupMapper = new ItemGroupMapper();
         this.orderNumber = orderNumber;
-        this.itemGroupList = itemGroupList;
-        this.customerId = customer.getUserId();
+        this.itemGroupDtoList = itemGroupMapper.mapItemGroupToDto(itemGroupList);
+        this.customerId = customerId;
         this.totalPrice = totalPrice;
     }
 
@@ -26,9 +29,9 @@ public class OrderDto {
         return orderNumber;
     }
 
-    public ItemGroup[] getItemGroupList() {
-        return itemGroupList;
-    }
+//    public ItemGroupDto[] getItemGroupList() {
+////        return itemGroupList;
+////    }
 
     public String getCustomerId() {
         return customerId;

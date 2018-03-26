@@ -41,8 +41,9 @@ public class ItemStock {
         return itemList;
     }
 
-    public Item getItemById(String itemId){
+    public String getItemById(String itemId){
         return itemStock.get(itemId);
     }
+
 
 }

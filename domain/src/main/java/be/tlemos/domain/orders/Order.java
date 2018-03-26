@@ -1,21 +1,16 @@
 package be.tlemos.domain.orders;
 
-import be.tlemos.domain.users.User;
-
-import java.lang.reflect.Array;
-import java.util.Collections;
 import java.util.List;
 
 public class Order {
 
     private int orderNumber;
     private List<ItemGroup> itemGroupList;
-    private User customer;
+    private String customerId;
     private double totalPrice;
 
-    public Order(int OrderNumber, List<ItemGroup> itemGroupList, User customer) {
-        this.customer = customer;
-        this.orderNumber = orderNumber;
+    public Order(List<ItemGroup> itemGroupList, String customerId) {
+        this.customerId = customerId;
         this.itemGroupList = itemGroupList;
     }
 
@@ -24,12 +19,12 @@ public class Order {
         return itemGroupList.toArray(itemGroups);
     }
 
-    public User getCustomer() {
-        return customer;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(User customer) {
-        this.customer = customer;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
     public int getOrderNumber() {
@@ -48,4 +43,7 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
+    public List<ItemGroup> getItemGroupList() {
+        return itemGroupList;
+    }
 }

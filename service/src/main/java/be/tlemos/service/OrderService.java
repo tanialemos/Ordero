@@ -22,4 +22,8 @@ public class OrderService {
          return (orderRepo.showAllOrdersInRepository());
     }
 
+    public void createNewOrder(Order order){
+        orderRepo.addOrderToRepository(order);
+    }
+
 }
