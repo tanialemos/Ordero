@@ -12,6 +12,9 @@ public class OrderDto {
     private String customerId;
     private double totalPrice;
 
+    public OrderDto() {
+    }
+
     public OrderDto(int orderNumber, ItemGroup[] itemGroupList, User customer, double totalPrice) {
         this.orderNumber = orderNumber;
         this.itemGroupList = itemGroupList;
