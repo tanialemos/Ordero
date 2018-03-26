@@ -1,6 +1,8 @@
 package be.tlemos.domain.orders;
 
 import be.tlemos.domain.users.User;
+
+import java.lang.reflect.Array;
 import java.util.Collections;
 import java.util.List;
 
@@ -17,8 +19,9 @@ public class Order {
         this.itemGroupList = itemGroupList;
     }
 
-    public List<ItemGroup> showAllItemGroupsInOrder(){
-        return Collections.unmodifiableList(itemGroupList);
+    public ItemGroup[] showAllItemGroupsInOrder(){
+        ItemGroup[] itemGroups = new ItemGroup[itemGroupList.size()];
+        return itemGroupList.toArray(itemGroups);
     }
 
     public User getCustomer() {
