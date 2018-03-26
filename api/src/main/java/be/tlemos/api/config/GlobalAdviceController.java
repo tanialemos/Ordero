@@ -20,5 +20,4 @@ public class GlobalAdviceController {
                 exception.getMessage(),
                 HttpStatus.NOT_FOUND);
     }
-
 }
