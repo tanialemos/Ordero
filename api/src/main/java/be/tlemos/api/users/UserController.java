@@ -26,8 +26,7 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     public List<UserDto> getUsers(){
         List<UserDto> userDtoList = new ArrayList<>();
-        List<User> userList = userService.getAllUsers();
-        for (User user : userList){
+        for (User user : userService.getAllUsers()){
             userDtoList.add(userMapper.mapUserToDto(user));
         }
         return userDtoList;
