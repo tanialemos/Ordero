@@ -1,14 +1,15 @@
 package be.tlemos.domain.orders;
 
+import be.tlemos.domain.items.Item;
 import be.tlemos.domain.items.ItemStock;
 import be.tlemos.domain.users.User;
 import be.tlemos.domain.users.UserRepository;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-
-import static java.util.Arrays.asList;
 
 public class Order {
 
@@ -20,6 +21,7 @@ public class Order {
     private double totalPrice;
     ItemGroup itemGroup1;
     ItemGroup itemGroup2;
+    private int itemGroupIdCounter;
 
     @Inject
     public Order(ItemStock itemStock, UserRepository userRepository, User customer, int orderNumber, double totalPrice) {
@@ -29,6 +31,7 @@ public class Order {
         this.orderNumber = orderNumber;
         this.totalPrice = totalPrice;
         itemGroupList = new ArrayList<>();
+        itemGroupIdCounter = 3;
     }
 
     private void generateInitialOrderGroupData(){
@@ -38,9 +41,14 @@ public class Order {
         itemGroupList.add(itemGroup2);
     }
 
-    private void addItemGroupToOrder(int itemGroup, String itemId, int orderedAmount){
-        ItemGroup newItemGroup = new ItemGroup(itemGroup, itemId, orderedAmount);
+    public void addItemGroupToOrder(Item item, int orderedAmount){
+        ItemGroup newItemGroup = new ItemGroup(itemGroupIdCounter, item, orderedAmount);
         itemGroupList.add(newItemGroup);
+        itemGroupIdCounter++;
+    }
+
+    public List<ItemGroup> getAllItemGroupsInOrder(){
+        return Collections.unmodifiableList(itemGroupList);
     }
 
     public ItemStock getItemStock() {
@@ -73,14 +81,6 @@ public class Order {
 
     public void setOrderNumber(int orderNumber) {
         this.orderNumber = orderNumber;
-    }
-
-    public List<ItemGroup> getItemGroupList() {
-        return itemGroupList;
-    }
-
-    public void setItemGroupList(List<ItemGroup> itemGroupList) {
-        this.itemGroupList = itemGroupList;
     }
 
     public double getTotalPrice() {
