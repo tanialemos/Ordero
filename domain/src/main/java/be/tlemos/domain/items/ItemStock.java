@@ -1,8 +1,12 @@
 package be.tlemos.domain.items;
 
+import javax.inject.Named;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+@Named
 public class ItemStock {
 
     private Map<String, Item> itemStock;
@@ -28,6 +32,12 @@ public class ItemStock {
             throw new IllegalArgumentException("An item with the same name already exists. Please provide a new one.");
         }
         itemStock.put(item.getName(), item);
+    }
+
+    public List<Item> getAllItemsInStock(){
+        List<Item> itemList = new ArrayList<>();
+        itemList.addAll(itemStock.values());
+        return itemList;
     }
 
 }

@@ -1,15 +1,13 @@
-package be.tlemos.domain.items;
+package be.tlemos.api.items;
 
-import java.util.UUID;
-
-public class Item {
+public class ItemDto {
 
     private String name;
     private String description;
     private double price;
     private int amount;
 
-    public Item(String name, String description, double price, int amount) {
+    public ItemDto(String name, String description, double price, int amount) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -20,31 +18,15 @@ public class Item {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public int getAmount() {
         return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
     }
 }
