@@ -7,6 +7,9 @@ public class ItemDto {
     private double price;
     private int amount;
 
+    public ItemDto() {
+    }
+
     public ItemDto(String name, String description, double price, int amount) {
         this.name = name;
         this.description = description;

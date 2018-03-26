@@ -2,6 +2,9 @@ package be.tlemos.api.items;
 
 import be.tlemos.domain.items.Item;
 
+import javax.inject.Named;
+
+@Named
 public class ItemMapper {
 
     public ItemDto mapItemToDto(Item item){

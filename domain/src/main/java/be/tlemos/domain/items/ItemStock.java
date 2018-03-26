@@ -16,6 +16,7 @@ public class ItemStock {
 
     public ItemStock(){
         itemStock = new HashMap<>();
+        initalItemData();
     }
 
     private void initalItemData(){
@@ -28,10 +29,10 @@ public class ItemStock {
     }
 
     public void addItemToItemStock(Item item) throws IllegalArgumentException {
-        if(itemStock.containsKey(item.getName())){
+        if(itemStock.containsKey(item.getName().toLowerCase())){
             throw new IllegalArgumentException("An item with the same name already exists. Please provide a new one.");
         }
-        itemStock.put(item.getName(), item);
+        itemStock.put(item.getName().toLowerCase(), item);
     }
 
     public List<Item> getAllItemsInStock(){
