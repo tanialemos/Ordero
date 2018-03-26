@@ -38,8 +38,9 @@ public class Order {
         itemGroupList.add(itemGroup2);
     }
 
-    private void addItemGroupToOrder(ItemGroup itemGroup){
-        itemGroupList.add(itemGroup);
+    private void addItemGroupToOrder(int itemGroup, String itemId, int orderedAmount){
+        ItemGroup newItemGroup = new ItemGroup(itemGroup, itemId, orderedAmount);
+        itemGroupList.add(newItemGroup);
     }
 
     public ItemStock getItemStock() {
