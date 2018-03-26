@@ -16,10 +16,10 @@ public class ItemStock {
 
     public ItemStock(){
         itemStock = new HashMap<>();
-        initalItemData();
+        initialItemData();
     }
 
-    private void initalItemData(){
+    private void initialItemData(){
         blackShoes = new Item("Black Shoes", "Basic black shoes for every occasion", 45.0, 100);
         whiteSandals = new Item("White Sandals", "Gorgeous white sandals perfect for the summer", 37.5, 68);
         flipFlops = new Item("Flip-flops", "Must-have for the beach", 15.0, 49);
