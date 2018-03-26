@@ -18,7 +18,7 @@ public abstract class User {
     }
 
     protected void setUserId(String userId){
-        this.userId = UUID.randomUUID().toString();
+        this.userId = userId;
     }
 
     public String getUserId() {

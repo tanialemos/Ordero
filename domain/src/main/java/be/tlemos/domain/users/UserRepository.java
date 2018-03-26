@@ -6,7 +6,6 @@ import java.util.*;
 @Named
 public class UserRepository {
 
-    private String idCounter;
     private Map<String, User> userRepository;
     private User user1;
     private User user2;
@@ -38,8 +37,8 @@ public class UserRepository {
     }
 
     public void addUserToRepository(User user){
-        user.setUserId(idCounter);
-        userRepository.put(idCounter, user);
+        user.setUserId(UUID.randomUUID().toString());
+        userRepository.put(user.getUserId(), user);
     }
 
 //    class UserData {
