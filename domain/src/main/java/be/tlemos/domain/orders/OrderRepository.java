@@ -9,10 +9,11 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.*;
 
+@Named
 public class OrderRepository {
 
     private Map<Integer, Order> orderRepository;
-    //GENERATING DATA
+    //FOR THE PURPOSE OF GENERATING INITIAL DATA
     Order order1;
     Order order2;
     ItemStock itemStock;
