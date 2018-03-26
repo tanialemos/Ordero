@@ -12,7 +12,7 @@ public class UserRepository {
     private User user3;
 
     public UserRepository() {
-        userRepository = new HashMap<String, User>();
+        userRepository = new HashMap<>();
         initialDataInRepository();
     }
 
@@ -20,9 +20,9 @@ public class UserRepository {
         user1 = new Customer(UserBuilder.buildUser().withFirstName("John").withLastName("Smith").withEMailAddress("john.smith@gmail.com").withPhoneNumber("0467895265"));
         user2 = new Customer(UserBuilder.buildUser().withFirstName("Mary").withLastName("Jane").withEMailAddress("mary.jane@gmail.com").withPhoneNumber("0468954125"));
         user3 = new Customer(UserBuilder.buildUser().withFirstName("Peter").withLastName("Parker").withEMailAddress("peter.parker@gmail.com").withPhoneNumber("0489615789"));
-        userRepository.put(user1.getUserId(), user1);
-        userRepository.put(user2.getUserId(), user2);
-        userRepository.put(user3.getUserId(), user3);
+        addUserToRepository(user1);
+        addUserToRepository(user2);
+        addUserToRepository(user3);
     }
 
     public List<User> getAllUsersFromRepository() throws NullPointerException {
