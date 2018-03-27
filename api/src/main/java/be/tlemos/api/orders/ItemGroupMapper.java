@@ -14,7 +14,7 @@ public class ItemGroupMapper {
             ItemGroupDto item = null;
             for(ItemGroup itemGroup : itemGroups) {
                 item = new ItemGroupDto(
-                itemGroup.getItem().getName(),
+                itemGroup.getItemName(),
                         itemGroup.getOrderedAmount(),
                         itemGroup.getOrderDate().getYear(),
                         itemGroup.getOrderDate().getMonthValue(),

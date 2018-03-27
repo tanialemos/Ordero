@@ -1,20 +1,19 @@
 package be.tlemos.api.orders;
 
-import be.tlemos.domain.orders.ItemGroup;
 import be.tlemos.domain.orders.Order;
 
 import javax.inject.Named;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @Named
 public class OrderMapper {
 
+    public static ItemGroupMapper itemGroupMapper = new ItemGroupMapper();
+
     public OrderDto mapOrderToDto(Order order){
+        ItemGroupDto[] itemGroupDtos = itemGroupMapper.mapItemGroupToDto(order.getItemGroupList());
         return new OrderDto(
                 order.getOrderNumber(),
-                order.getItemGroupList(),
+                itemGroupDtos,
                 order.getCustomerId(),
                 order.getTotalPrice()
         );

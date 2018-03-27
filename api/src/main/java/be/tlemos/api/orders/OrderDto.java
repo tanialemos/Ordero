@@ -17,10 +17,10 @@ public class OrderDto {
     public OrderDto() {
     }
 
-    public OrderDto(int orderNumber, List<ItemGroup> itemGroupList, String customerId, double totalPrice) {
+    public OrderDto(int orderNumber, ItemGroupDto[] itemGroupList, String customerId, double totalPrice) {
         itemGroupMapper = new ItemGroupMapper();
         this.orderNumber = orderNumber;
-        this.itemGroupDtoList = itemGroupMapper.mapItemGroupToDto(itemGroupList);
+        this.itemGroupDtoList = itemGroupList;
         this.customerId = customerId;
         this.totalPrice = totalPrice;
     }

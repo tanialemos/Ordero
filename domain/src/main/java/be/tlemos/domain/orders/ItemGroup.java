@@ -25,10 +25,6 @@ public class ItemGroup {
 //        // todo: calculate if item not in stock
 //    }
 
-//    public String getItem() {
-//        return item;
-//    }
-
     public int getOrderedAmount() {
         return orderedAmount;
     }
@@ -53,5 +49,7 @@ public class ItemGroup {
         return subtotal;
     }
 
-
+    public String getItemName() {
+        return itemName;
+    }
 }

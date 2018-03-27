@@ -32,7 +32,7 @@ public class OrderController {
         return orderDtos;
     }
 
-//    @PostMapping(path="new_order", produces = "applicatio/json", consumes = "application/json")
+//    @PostMapping(path="new_order", produces = "application/json", consumes = "application/json")
 //    @ResponseStatus(HttpStatus.CREATED)
 //    public OrderDto createNewOrder(@RequestBody OrderDto orderDto){
 //        orderService.createNewOrder(mapper.mapDtoToOrder(orderDto));
