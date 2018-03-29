@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path = "/items")
@@ -25,11 +26,10 @@ public class ItemController {
     @GetMapping(produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public List<ItemDto> getAllItemsInStock(){
-        List<ItemDto> itemDtoList = new ArrayList<>();
-        for (Item item : itemService.getAllItemsInStock()){
-            itemDtoList.add(mapper.mapItemToDto(item));
-        }
-        return itemDtoList;
+        List<Item> itemList = itemService.getAllItemsInStock();
+        return itemList.stream()
+                .map(x->mapper.mapItemToDto(x))
+                .collect(Collectors.toList());
     }
 
     @PostMapping(path="/new_item", produces = "application/json", consumes = "application/json")
