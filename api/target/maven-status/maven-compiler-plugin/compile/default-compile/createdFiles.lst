@@ -1,0 +1,12 @@
+be\tlemos\api\orders\ItemGroupDto.class
+be\tlemos\api\config\GlobalAdviceController.class
+be\tlemos\api\users\UserController.class
+be\tlemos\api\orders\OrderDto.class
+be\tlemos\api\items\ItemDto.class
+be\tlemos\api\items\ItemMapper.class
+be\tlemos\api\orders\OrderMapper.class
+be\tlemos\api\orders\OrderController.class
+be\tlemos\api\users\UserMapper.class
+be\tlemos\api\items\ItemController.class
+be\tlemos\api\orders\ItemGroupMapper.class
+be\tlemos\api\users\UserDto.class

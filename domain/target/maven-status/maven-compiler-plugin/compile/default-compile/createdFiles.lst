@@ -1,0 +1,9 @@
+be\tlemos\domain\users\User.class
+be\tlemos\domain\orders\Order.class
+be\tlemos\domain\users\Customer.class
+be\tlemos\domain\users\UserRepository.class
+be\tlemos\domain\users\UserBuilder.class
+be\tlemos\domain\items\Item.class
+be\tlemos\domain\items\ItemStock.class
+be\tlemos\domain\orders\ItemGroup.class
+be\tlemos\domain\orders\OrderRepository.class
