@@ -1655,3 +1655,335 @@ Verify the connector's configuration, identify and stop any process that's liste
 2018-03-27 16:30:30.629  INFO 8032 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018-03-27 16:30:30.629  INFO 8032 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-03-27 16:30:30.660  INFO 8032 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2018-04-03 19:19:56.673  INFO 8904 --- [main] be.tlemos.jar.Application                : Starting Application on L51W5LQ with PID 8904 (started by 7515772 in C:\Users\7515772\Java Academy\code-labs\Ordero)
+2018-04-03 19:19:56.692  INFO 8904 --- [main] be.tlemos.jar.Application                : No active profile set, falling back to default profiles: default
+2018-04-03 19:19:56.785  INFO 8904 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 19:19:56 CEST 2018]; root of context hierarchy
+2018-04-03 19:19:58.038  INFO 8904 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-03 19:19:59.124  INFO 8904 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-04-03 19:19:59.147  INFO 8904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-04-03 19:19:59.151  INFO 8904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-03 19:19:59.323  INFO 8904 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-04-03 19:19:59.325  INFO 8904 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2543 ms
+2018-04-03 19:19:59.550  INFO 8904 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-03 19:19:59.557  INFO 8904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-03 19:19:59.558  INFO 8904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-03 19:19:59.560  INFO 8904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-03 19:19:59.561  INFO 8904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-03 19:19:59.624  WARN 8904 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemController' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\api\target\classes\be\tlemos\api\items\ItemController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemService' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\service\target\classes\be\tlemos\service\ItemService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemStock' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\domain\target\classes\be\tlemos\domain\items\ItemStock.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [be.tlemos.domain.items.ItemStock]: Constructor threw exception; nested exception is java.lang.NullPointerException
+2018-04-03 19:19:59.628  INFO 8904 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-04-03 19:19:59.651  INFO 8904 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-04-03 19:19:59.661 ERROR 8904 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemController' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\api\target\classes\be\tlemos\api\items\ItemController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemService' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\service\target\classes\be\tlemos\service\ItemService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemStock' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\domain\target\classes\be\tlemos\domain\items\ItemStock.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [be.tlemos.domain.items.ItemStock]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at be.tlemos.jar.Application.main(Application.java:10) [classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'itemService' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\service\target\classes\be\tlemos\service\ItemService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemStock' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\domain\target\classes\be\tlemos\domain\items\ItemStock.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [be.tlemos.domain.items.ItemStock]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'itemStock' defined in file [C:\Users\7515772\Java Academy\code-labs\Ordero\domain\target\classes\be\tlemos\domain\items\ItemStock.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [be.tlemos.domain.items.ItemStock]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1155) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	... 33 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [be.tlemos.domain.items.ItemStock]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1147) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	... 45 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at be.tlemos.domain.items.ItemStock.generateInitialItemData(ItemStock.java:27) ~[classes/:na]
+	at be.tlemos.domain.items.ItemStock.<init>(ItemStock.java:20) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_162]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_162]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	... 47 common frames omitted
+
+2018-04-03 19:22:50.071  INFO 6940 --- [main] be.tlemos.jar.Application                : Starting Application on L51W5LQ with PID 6940 (started by 7515772 in C:\Users\7515772\Java Academy\code-labs\Ordero)
+2018-04-03 19:22:50.075  INFO 6940 --- [main] be.tlemos.jar.Application                : No active profile set, falling back to default profiles: default
+2018-04-03 19:22:50.247  INFO 6940 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b59d31: startup date [Tue Apr 03 19:22:50 CEST 2018]; root of context hierarchy
+2018-04-03 19:22:52.319  INFO 6940 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-03 19:22:53.382  INFO 6940 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-04-03 19:22:53.399  INFO 6940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-04-03 19:22:53.401  INFO 6940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-03 19:22:53.556  INFO 6940 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-04-03 19:22:53.557  INFO 6940 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3314 ms
+2018-04-03 19:22:53.757  INFO 6940 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-03 19:22:53.764  INFO 6940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-03 19:22:53.764  INFO 6940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-03 19:22:53.765  INFO 6940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-03 19:22:53.766  INFO 6940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-03 19:22:54.276  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b59d31: startup date [Tue Apr 03 19:22:50 CEST 2018]; root of context hierarchy
+2018-04-03 19:22:54.386  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.items.ItemDto> be.tlemos.api.items.ItemController.getAllItemsInStock()
+2018-04-03 19:22:54.388  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items/new_item],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.items.ItemDto be.tlemos.api.items.ItemController.addNewItemToStock(be.tlemos.api.items.ItemDto)
+2018-04-03 19:22:54.389  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.orders.OrderDto> be.tlemos.api.orders.OrderController.showAllOrders()
+2018-04-03 19:22:54.391  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.users.UserDto> be.tlemos.api.users.UserController.getUsers()
+2018-04-03 19:22:54.391  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/customers],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.users.UserDto be.tlemos.api.users.UserController.createCustomerAccount(be.tlemos.api.users.UserDto)
+2018-04-03 19:22:54.394  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-03 19:22:54.395  INFO 6940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-03 19:22:54.437  INFO 6940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:22:54.437  INFO 6940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:22:54.457  INFO 6940 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalAdviceController
+2018-04-03 19:22:54.491  INFO 6940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:22:54.675  INFO 6940 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-04-03 19:22:54.715 ERROR 6940 --- [main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_162]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at be.tlemos.jar.Application.main(Application.java:10) [classes/:na]
+
+2018-04-03 19:22:54.716 ERROR 6940 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at be.tlemos.jar.Application.main(Application.java:10) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_162]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 14 common frames omitted
+
+2018-04-03 19:22:54.728  INFO 6940 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-04-03 19:22:54.745  INFO 6940 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-04-03 19:22:54.751 ERROR 6940 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-04-03 19:22:54.754  INFO 6940 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b59d31: startup date [Tue Apr 03 19:22:50 CEST 2018]; root of context hierarchy
+2018-04-03 19:22:54.756  INFO 6940 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-04-03 19:25:03.179  INFO 9124 --- [main] be.tlemos.jar.Application                : Starting Application on L51W5LQ with PID 9124 (started by 7515772 in C:\Users\7515772\Java Academy\code-labs\Ordero)
+2018-04-03 19:25:03.184  INFO 9124 --- [main] be.tlemos.jar.Application                : No active profile set, falling back to default profiles: default
+2018-04-03 19:25:03.313  INFO 9124 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 19:25:03 CEST 2018]; root of context hierarchy
+2018-04-03 19:25:04.810  INFO 9124 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-03 19:25:06.145  INFO 9124 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-04-03 19:25:06.159  INFO 9124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-04-03 19:25:06.162  INFO 9124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-03 19:25:06.327  INFO 9124 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-04-03 19:25:06.329  INFO 9124 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3020 ms
+2018-04-03 19:25:06.529  INFO 9124 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-03 19:25:06.536  INFO 9124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-03 19:25:06.537  INFO 9124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-03 19:25:06.539  INFO 9124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-03 19:25:06.539  INFO 9124 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-03 19:25:06.989  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 19:25:03 CEST 2018]; root of context hierarchy
+2018-04-03 19:25:07.104  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.items.ItemDto> be.tlemos.api.items.ItemController.getAllItemsInStock()
+2018-04-03 19:25:07.107  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items/new_item],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.items.ItemDto be.tlemos.api.items.ItemController.addNewItemToStock(be.tlemos.api.items.ItemDto)
+2018-04-03 19:25:07.108  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.orders.OrderDto> be.tlemos.api.orders.OrderController.showAllOrders()
+2018-04-03 19:25:07.109  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/customers],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.users.UserDto be.tlemos.api.users.UserController.createCustomerAccount(be.tlemos.api.users.UserDto)
+2018-04-03 19:25:07.110  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.users.UserDto> be.tlemos.api.users.UserController.getUsers()
+2018-04-03 19:25:07.114  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-03 19:25:07.115  INFO 9124 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-03 19:25:07.157  INFO 9124 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:25:07.158  INFO 9124 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:25:07.181  INFO 9124 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalAdviceController
+2018-04-03 19:25:07.218  INFO 9124 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:25:07.390  INFO 9124 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-04-03 19:25:07.434 ERROR 9124 --- [main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_162]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at be.tlemos.jar.Application.main(Application.java:10) [classes/:na]
+
+2018-04-03 19:25:07.435 ERROR 9124 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at be.tlemos.jar.Application.main(Application.java:10) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_162]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 14 common frames omitted
+
+2018-04-03 19:25:07.445  INFO 9124 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-04-03 19:25:07.461  INFO 9124 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-04-03 19:25:07.465 ERROR 9124 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-04-03 19:25:07.468  INFO 9124 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 19:25:03 CEST 2018]; root of context hierarchy
+2018-04-03 19:25:07.469  INFO 9124 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-04-03 19:28:15.417  INFO 7856 --- [main] be.tlemos.jar.Application                : Starting Application on L51W5LQ with PID 7856 (started by 7515772 in C:\Users\7515772\Java Academy\code-labs\Ordero)
+2018-04-03 19:28:15.422  INFO 7856 --- [main] be.tlemos.jar.Application                : No active profile set, falling back to default profiles: default
+2018-04-03 19:28:15.516  INFO 7856 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 19:28:15 CEST 2018]; root of context hierarchy
+2018-04-03 19:28:17.538  INFO 7856 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-03 19:28:18.543  INFO 7856 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2018-04-03 19:28:18.567  INFO 7856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-04-03 19:28:18.570  INFO 7856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-03 19:28:18.756  INFO 7856 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-04-03 19:28:18.757  INFO 7856 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3245 ms
+2018-04-03 19:28:18.965  INFO 7856 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-03 19:28:18.973  INFO 7856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-03 19:28:18.974  INFO 7856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-03 19:28:18.976  INFO 7856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-03 19:28:18.977  INFO 7856 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-03 19:28:19.442  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 19:28:15 CEST 2018]; root of context hierarchy
+2018-04-03 19:28:19.560  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.items.ItemDto> be.tlemos.api.items.ItemController.getAllItemsInStock()
+2018-04-03 19:28:19.564  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items/new_item],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.items.ItemDto be.tlemos.api.items.ItemController.addNewItemToStock(be.tlemos.api.items.ItemDto)
+2018-04-03 19:28:19.566  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.orders.OrderDto> be.tlemos.api.orders.OrderController.showAllOrders()
+2018-04-03 19:28:19.568  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/customers],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.users.UserDto be.tlemos.api.users.UserController.createCustomerAccount(be.tlemos.api.users.UserDto)
+2018-04-03 19:28:19.568  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.users.UserDto> be.tlemos.api.users.UserController.getUsers()
+2018-04-03 19:28:19.572  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-03 19:28:19.573  INFO 7856 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-03 19:28:19.612  INFO 7856 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:28:19.613  INFO 7856 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:28:19.632  INFO 7856 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalAdviceController
+2018-04-03 19:28:19.666  INFO 7856 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 19:28:19.851  INFO 7856 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-04-03 19:28:19.927  INFO 7856 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2018-04-03 19:28:19.932  INFO 7856 --- [main] be.tlemos.jar.Application                : Started Application in 5.02 seconds (JVM running for 5.671)

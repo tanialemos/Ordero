@@ -1,3 +1,4 @@
+be\tlemos\domain\exceptions\ItemAlreadyExistsException.class
 be\tlemos\domain\users\User.class
 be\tlemos\domain\orders\Order.class
 be\tlemos\domain\users\Customer.class

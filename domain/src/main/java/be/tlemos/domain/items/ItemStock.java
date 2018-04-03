@@ -17,7 +17,7 @@ public class ItemStock {
     public ItemStock(){
         counterItemId = 4;
         itemStock = new HashMap<>();
-        generateInitialItemData();
+//        generateInitialItemData();
     }
 
     private void generateInitialItemData(){
