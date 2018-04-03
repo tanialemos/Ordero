@@ -20,7 +20,7 @@
         <dependency>
             <groupId>be.tlemos</groupId>
             <artifactId>api</artifactId>
-            <version>1.0</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

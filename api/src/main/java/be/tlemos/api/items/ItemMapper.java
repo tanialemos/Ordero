@@ -9,6 +9,7 @@ public class ItemMapper {
 
     public ItemDto mapItemToDto(Item item){
         return new ItemDto(
+                item.getItemId(),
                 item.getName(),
                 item.getDescription(),
                 item.getPrice(),

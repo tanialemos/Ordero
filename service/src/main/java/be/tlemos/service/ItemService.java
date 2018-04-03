@@ -17,8 +17,8 @@ public class ItemService {
         this.itemStock = itemStock;
     }
 
-    public void addNewItem(Item item){
-        itemStock.addItemToItemStock(item);
+    public void createNewItem(Item item){
+        itemStock.createNewItem(item);
     }
 
     public List<Item> getAllItemsInStock(){

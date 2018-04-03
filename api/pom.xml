@@ -20,12 +20,12 @@
         <dependency>
             <groupId>be.tlemos</groupId>
             <artifactId>service</artifactId>
-            <version>1.0</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>be.tlemos</groupId>
             <artifactId>domain</artifactId>
-            <version>1.0</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
