@@ -15,17 +15,17 @@ public class ItemStock {
     private Item item3;
 
     public ItemStock(){
-        counterItemId = 4;
         itemStock = new HashMap<>();
+        counterItemId = 4;
         generateInitialItemData();
     }
 
     private void generateInitialItemData(){
         item1 = new Item("Black shoes", "Basic black shoes", 55.9, 252);
         item1.setItemId(1);
-        item1 = new Item("Flip-flops", "Must-have for the beach", 14.99, 684);
+        item2 = new Item("Flip-flops", "Must-have for the beach", 14.99, 684);
         item2.setItemId(2);
-        item1 = new Item("Spring boots", "Boots to make your spring easier", 98.50, 54);
+        item3 = new Item("Spring boots", "Boots to make your spring easier", 98.50, 54);
         item3.setItemId(3);
 
         itemStock.put(item1.getItemId(), item1);
@@ -43,9 +43,11 @@ public class ItemStock {
     }
 
     private boolean doesItemNameAlreadyExist(Item item) {
-        return itemStock.values().stream()
-                .noneMatch(x -> x.getName().equals(item.getName()));
-
+        for (Item itemInStock : itemStock.values()){
+            if (itemInStock.getName().equals(item.getName()))
+                return true;
+        }
+        return false;
     }
 
     public List<Item> getAllItemsInStock(){
