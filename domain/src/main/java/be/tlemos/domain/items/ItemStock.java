@@ -33,13 +33,14 @@ public class ItemStock {
         itemStock.put(item3.getItemId(), item3);
     }
 
-    public void createNewItem(Item item) throws ItemAlreadyExistsException {
+    public Item createNewItem(Item item) throws ItemAlreadyExistsException {
         if(doesItemNameAlreadyExist(item)){
             throw new ItemAlreadyExistsException("An item with the same name already exists. Please provide a new one.");
         }
         item.setItemId(counterItemId);
         itemStock.put(item.getItemId(), item);
         counterItemId++;
+        return item;
     }
 
     private boolean doesItemNameAlreadyExist(Item item) {

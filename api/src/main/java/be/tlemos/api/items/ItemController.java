@@ -34,7 +34,7 @@ public class ItemController {
     @PostMapping(path="/new_item", produces = "application/json", consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public ItemDto addNewItemToStock(@RequestBody ItemDto itemDto){
-        itemService.createNewItem(mapper.mapDtoToItem(itemDto));
-        return itemDto;
+        Item item = itemService.createNewItem(mapper.mapDtoToItem(itemDto));
+        return mapper.mapItemToDto(item);
     }
 }
