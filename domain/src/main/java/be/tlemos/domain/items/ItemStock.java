@@ -28,9 +28,9 @@ public class ItemStock {
         item1 = new Item("Spring boots", "Boots to make your spring easier", 98.50, 54);
         item3.setItemId(3);
 
-        createNewItem(item1);
-        createNewItem(item2);
-        createNewItem(item3);
+        itemStock.put(item1.getItemId(), item1);
+        itemStock.put(item2.getItemId(), item2);
+        itemStock.put(item3.getItemId(), item3);
     }
 
     public void createNewItem(Item item) throws ItemAlreadyExistsException {
