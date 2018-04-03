@@ -1987,3 +1987,35 @@ Verify the connector's configuration, identify and stop any process that's liste
 2018-04-03 19:28:19.851  INFO 7856 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
 2018-04-03 19:28:19.927  INFO 7856 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
 2018-04-03 19:28:19.932  INFO 7856 --- [main] be.tlemos.jar.Application                : Started Application in 5.02 seconds (JVM running for 5.671)
+2018-04-03 20:58:18.527  INFO 1072 --- [main] be.tlemos.jar.Application                : Starting Application on L51W5LQ with PID 1072 (started by 7515772 in C:\Users\7515772\Java Academy\code-labs\Ordero)
+2018-04-03 20:58:18.531  INFO 1072 --- [main] be.tlemos.jar.Application                : No active profile set, falling back to default profiles: default
+2018-04-03 20:58:18.631  INFO 1072 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 20:58:18 CEST 2018]; root of context hierarchy
+2018-04-03 20:58:20.577  INFO 1072 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-03 20:58:21.592  INFO 1072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2018-04-03 20:58:21.608  INFO 1072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-04-03 20:58:21.611  INFO 1072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-04-03 20:58:21.779  INFO 1072 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-04-03 20:58:21.780  INFO 1072 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3152 ms
+2018-04-03 20:58:21.993  INFO 1072 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-03 20:58:22.000  INFO 1072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-03 20:58:22.000  INFO 1072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-03 20:58:22.001  INFO 1072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-03 20:58:22.002  INFO 1072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-03 20:58:22.463  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4df828d7: startup date [Tue Apr 03 20:58:18 CEST 2018]; root of context hierarchy
+2018-04-03 20:58:22.556  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.items.ItemDto> be.tlemos.api.items.ItemController.getAllItemsInStock()
+2018-04-03 20:58:22.559  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/items/new_item],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.items.ItemDto be.tlemos.api.items.ItemController.addNewItemToStock(be.tlemos.api.items.ItemDto)
+2018-04-03 20:58:22.560  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orders],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.orders.OrderDto> be.tlemos.api.orders.OrderController.showAllOrders()
+2018-04-03 20:58:22.561  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET],produces=[application/json]}" onto public java.util.List<be.tlemos.api.users.UserDto> be.tlemos.api.users.UserController.getUsers()
+2018-04-03 20:58:22.562  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/customers],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public be.tlemos.api.users.UserDto be.tlemos.api.users.UserController.createCustomerAccount(be.tlemos.api.users.UserDto)
+2018-04-03 20:58:22.565  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-03 20:58:22.566  INFO 1072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-03 20:58:22.615  INFO 1072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 20:58:22.615  INFO 1072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 20:58:22.634  INFO 1072 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalAdviceController
+2018-04-03 20:58:22.673  INFO 1072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-03 20:58:22.919  INFO 1072 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-04-03 20:58:22.998  INFO 1072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2018-04-03 20:58:23.007  INFO 1072 --- [main] be.tlemos.jar.Application                : Started Application in 4.958 seconds (JVM running for 5.68)
+2018-04-03 20:58:44.138  INFO 1072 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-04-03 20:58:44.138  INFO 1072 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-03 20:58:44.175  INFO 1072 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
